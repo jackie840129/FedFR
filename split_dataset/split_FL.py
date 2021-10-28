@@ -44,7 +44,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--data_dir',default='/lssd1/face_recognition/faces_ms1m-refine-v2_112x112/faces_emore/')
     parser.add_argument('--output_dir',default='/lssd1/face_recognition/ms1m_split/')
-    parser.add_argument('--num_client',type=int,default=10)
+    parser.add_argument('--num_client',type=int,default=1)
     parser.add_argument('--num_ID',type=int,default=10)
     args = parser.parse_args()
     print(args)
