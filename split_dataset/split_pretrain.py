@@ -43,9 +43,10 @@ if __name__ == '__main__':
     parser.add_argument('--output_dir',default='/lssd1/face_recognition/ms1m_split/')
     parser.add_argument('--num_client',type=int,default=10)
     parser.add_argument('--num_ID',type=int,default=6000)
-    parser.add_argument('--relabel',type=bool,default=True)
+    parser.add_argument('--dis_relabel',action='store_true')
     args = parser.parse_args()
     print(args)
+    args.relabel = not args.dis_relabel
 
     print('- Loading original dataset %s...'%(args.data_dir.split('/')[-1]))
     dataset = MXFaceDataset(root_dir=args.data_dir)

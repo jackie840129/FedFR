@@ -15,7 +15,6 @@ The meaning of the argument is as follow:
 - **`output_dir`** : Your desired path. eg. "/home/jackieliu/ms1m_split/"
 - **`num_client`** : The number of clients in the federated framework. eg. 40 in our work.
 - **`num_ID`** : The number of total ID in the federated framework. eg. 4000 in our work.
-- **`relabel
 
 ## Generate Pretrained dataset
 
