@@ -1,7 +1,12 @@
-# FedFR
+# FedFR: Joint Optimization Federated Framework for Generic and Personalized Face Recognition
 
-I haven't completed all the scripts and Readme for running the FedFR.
-Comming soon!!!!!!
+[[Paper]](https://ojs.aaai.org/index.php/AAAI/article/view/20057/19816) [[arXiv]](https://arxiv.org/abs/2112.12496)
+
+[Chih-Ting Liu](https://jackie840129.github.io/), Chien-Yi Wang, Shao-Yi Chien, Shang-Hong Lai, <br/>Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2022
+
+## Generate FedFR Dataset
+
+You can follow the steps in [split_dataset](split_dataset) to generate our pretrained, and FL dataset.
 
 ## Prerequisite
 
