@@ -1,1 +1,3 @@
 pretrain/backbone.pth
+backbones/__pycache__/*
+ckpt/*
