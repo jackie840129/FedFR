@@ -30,3 +30,28 @@ There are two types of job, '1:1' and '1:n', as described in our paper.
 If you want to evaluate both, you can use `--job 'both'`.
 
 ## Personalized Evaluation
+
+Each model trained by client before FedAvg model aggregation will be used to evaluate the personalized performance.
+
+Furthermore, as described in paper, the backbone and the tranformation layer will be concatenated to generate personalized features.
+
+The evaluation scripts are as follows:
+
+We only provide single checkpoint for some epoch and single type of evaluation ('1:1' or '1:n')
+
+### 1:1 Evaluation
+```
+python3 local_all.py --backbone 'multi' --task '1:1' --ckpt_path ckpt/FedFR \
+                     --data_dir $VERI_DIR --gallery $GALLERY_DIR --epoch 11 --num_client 40 --gpu 0 1 2 3
+```
+- `$VERI_DIR` is the path to 'local_veri_4000' when you split your dataset, eg. '/home/jackieliu/face_recognition/ms1m_split/local_veri_4000'
+- `$GALLERY_DIR` is the path to 'local_gallery_4000', eg. '/home/jackieliu/face_recognition/ms1m_split/local_gallery_4000'
+
+### 1:n Evaluation
+```
+python3 local_all.py --backbone 'multi' --task '1:n' --ckpt_path ckpt/FedFR \
+                     --data_dir $VERI_DIR --gallery $GALLERY_DIR --epoch 11 --num_client 40 --gpu 0 1 2 3
+```
+- `$VERI_DIR` is the path to 'local_veri_4000' when you split your dataset, eg. '/home/jackieliu/face_recognition/ms1m_split/local_veri_4000'
+- `$GALLERY_DIR` is the path to 'local_gallery_4000', eg. '/home/jackieliu/face_recognition/ms1m_split/local_gallery_4000'
+
